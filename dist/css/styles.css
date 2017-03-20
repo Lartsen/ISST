@@ -1,0 +1,68 @@
+body {
+  background-color: #f8f8f8;
+}
+/*Inicio de sesion*/
+.login-panel {
+  margin-top: 25%;
+}
+
+/*Navbar*/
+.navbar {
+  background-color: white;
+}
+
+.navbar-top-links li:last-child {
+  margin-right: 15px;
+}
+.navbar-top-links li #nav-text {
+  padding: 15px;
+  min-height: 50px;
+  position: relative;
+  display: block;
+}
+.navbar-top-links li a {
+  padding: 15px;
+  min-height: 50px;
+  position: relative;
+  display: block;
+}
+.navbar-top-links .dropdown-menu li {
+  display: block;
+}
+.navbar-top-links .dropdown-menu li:last-child {
+  margin-right: 0;
+}
+.navbar-top-links .dropdown-menu li a {
+  padding: 3px 20px;
+  min-height: 0;
+}
+.navbar-top-links .dropdown-menu li a div {
+  white-space: normal;
+}
+.navbar-top-links .dropdown-user {
+  right: 0;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .navbar-top-links>li {
+      float: left;
+  }
+}
+
+/*Pagina*/
+#wrapper {
+  width: 100%;
+}
+#page-wrapper {
+  padding: 0 15px;
+  min-height: 568px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    border-left: 1px solid #e7e7e7;
+  }
+}

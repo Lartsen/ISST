@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+        <title>Gestión de viajes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/styles.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-fixed-top navbar-default" role="navigation" style="margin-bottom: 0">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Boton de navegacion</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <!--LOGO-->
+                <a class="navbar-brand" href="#">Gestión de Viajes</a>
+                
+                <!--/LOGO-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <!--NAV DE Gestion-->
+                    
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="page-scroll">
+                            <span id="nav-text">Bienvenido Empleado</span>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="form-viaje.html" id="form-viaje"><i class="fa fa-fw fa-wpforms" aria-hidden="true"></i>Solicitud de viaje</a>
+                        </li>
+                        
+                        <li class="page-scroll">
+                            <a href="form-reembolso.html" id="form-reembolso"><i class="fa fa-wpforms" aria-hidden="true"></i> Solicitar reembolso</a>
+                        </li>
+
+                        <!--<li class="page-scroll">
+                            <a href="solicitados.html"><i class="fa fa-picture-o" aria-hidden="true"></i></i> Viajes solicitados</a>
+                        </li>-->
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="home-empleado.html"><i class="fa fa-gear fa-fw"></i> Principal</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        
+                    </ul>
+                    <!--/NAV-->
+                </div>
+                <!-- /.navbar-collapse-->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        
+        <div class="container page-wrapper">
+            
+            <h1 id="titulo"> hwy </h1>
+            <form role="form" id="reembolso" name="reembolso">
+                <fieldset>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Nombre*" name="firstname" id="firstname" type="text" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Apellidos*" name="lastname" id="lastname" type="text" autofocus>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Identificador*" name="identificador" id="identificador" type="number" autofocus>
+                        </div>
+                    </div>
+                    <div class="col-md-6">   
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Destino*" name="destination" id="destination" type="text" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Cantidad*" name="cantidad" id="cantidad" type="number" autofocus>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-12">
+                        <button class="btn btn-success col-md-2" id="validar">Validar</button>
+                        <a class="pull-right" type="button" href="home-empleado.html"> Cancelar </a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery-3.2.0.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--Custom-->
+    <script src="dist/js/script.js"></script>
+    <script src="dist/js/script-form-reembolso.js"></script>
+
+    <!-- Jquery Validate -->
+    <script src="validate/jquery.validate.min.js"></script>
+    <script src="validate/validar-reembolso.js"></script>
+</body>
+
+
+
+</html>

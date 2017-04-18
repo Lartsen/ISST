@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+         version="2.5">
+<filter>
+   	<filter-name>ObjectifyFilter</filter-name>
+    	<filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+</filter>
+<filter-mapping>
+    	<filter-name>ObjectifyFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+</filter-mapping>
+         
+  <servlet>
+    <servlet-name>Presentation</servlet-name>
+    <servlet-class>viajes.PresentationServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>viajes.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>PostViajeForm</servlet-name>
+    <servlet-class>viajes.ViajeFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SendMail</servlet-name>
+    <servlet-class>viajes.EnviarCorreoServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>PostRembForm</servlet-name>
+    <servlet-class>viajes.RembFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ViajeForm</servlet-name>
+    <servlet-class>viajes.PresentViaFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>RembForm</servlet-name>
+    <servlet-class>viajes.PresentRembFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ManageRemb</servlet-name>
+    <servlet-class>viajes.ManageRembServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ManageVia</servlet-name>
+    <servlet-class>viajes.ManageViaServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>FormMail</servlet-name>
+    <servlet-class>viajes.PresentMailFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>viajes.DeleteServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>FileForm</servlet-name>
+    <servlet-class>viajes.PresentFileFormServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UploadFile</servlet-name>
+    <servlet-class>viajes.UploadFileServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SeeFile</servlet-name>
+    <servlet-class>viajes.PresentFileServlet</servlet-class>
+  </servlet>
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>Presentation</servlet-name>
+    <url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PostViajeForm</servlet-name>
+    <url-pattern>/postViajeForm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PostRembForm</servlet-name>
+    <url-pattern>/postRembForm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ViajeForm</servlet-name>
+    <url-pattern>/formViaje</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>RembForm</servlet-name>
+    <url-pattern>/formRemb</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ManageRemb</servlet-name>
+    <url-pattern>/manageRemb</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SendMail</servlet-name>
+    <url-pattern>/sendmail</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ManageVia</servlet-name>
+    <url-pattern>/manageVia</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>FormMail</servlet-name>
+    <url-pattern>/formMail</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>FileForm</servlet-name>
+    <url-pattern>/formFile</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UploadFile</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SeeFile</servlet-name>
+    <url-pattern>/seedoc</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

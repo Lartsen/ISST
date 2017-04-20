@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import viajes.dao.PRODAO;
+import viajes.dao.PRODAOImpl;
 import viajes.dao.USUDAO;
 import viajes.dao.USUDAOImpl;
 import viajes.dao.VIADAO;
@@ -26,6 +28,7 @@ public class ViajeFormServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 		      throws IOException {
 		VIADAO dao2 = VIADAOImpl.getInstancia();
+		PRODAO dao3 = PRODAOImpl.getInstancia();
 		String usuario = (String) request.getSession().getAttribute("usuario");
 		
 		Date inicio = null;
@@ -36,7 +39,9 @@ public class ViajeFormServlet extends HttpServlet {
 		} catch (ParseException e1) {
 			e1.printStackTrace();
 		}
-		dao2.createVIA(request.getParameter("destino"), usuario, request.getParameter("proyecto"), inicio, fin, request.getParameter("descripcion"));
+		if(dao3.getPro(request.getParameter("proyecto")) != null){
+			dao2.createVIA(request.getParameter("destino"), usuario, request.getParameter("proyecto"), inicio, fin, request.getParameter("descripcion"));
+		}
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {

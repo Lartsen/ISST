@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import viajes.dao.PRODAO;
+import viajes.dao.PRODAOImpl;
 import viajes.dao.REMBDAO;
 import viajes.dao.REMBDAOImpl;
 import viajes.dao.USUDAO;
@@ -26,10 +28,12 @@ public class RembFormServlet extends HttpServlet {
 		      throws IOException {
 		VIADAO dao2 = VIADAOImpl.getInstancia();
 		REMBDAO dao3 = REMBDAOImpl.getInstancia();
+		PRODAO dao4 = PRODAOImpl.getInstancia();
 		String usuario = (String) request.getSession().getAttribute("usuario");
 		
-		
-		dao3.createREMB(request.getParameter("destino"), usuario, request.getParameter("proyecto"), Integer.parseInt(request.getParameter("cantidad")));
+		if(dao4.getPro(request.getParameter("proyecto")) != null){
+			dao3.createREMB(request.getParameter("destino"), usuario, request.getParameter("proyecto"), Integer.parseInt(request.getParameter("cantidad")));
+		}
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
